@@ -31,7 +31,6 @@
             background: var(--dark-bg);
             color: var(--text-primary);
             overflow-x: hidden;
-            cursor: none;
             width: 100%;
         }
 
@@ -42,7 +41,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 100%;   
             background: var(--dark-bg);
             display: flex;
             flex-direction: column;
@@ -198,11 +197,6 @@
             color: var(--text-secondary);
             margin-bottom: 3rem;
             font-weight: 300;
-        }
-
-        .glitch-text {
-            position: relative;
-            animation: glitch 2s infinite;
         }
 
         .cta-container {
@@ -743,35 +737,7 @@
             padding: 0 2rem;
         }
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-link {
-            width: 60px;
-            height: 60px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 2px solid var(--glass-border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            box-shadow: var(--neon-glow);
-            transform: translateY(-5px);
-        }
+       
 
         /* Scroll Indicator */
         .scroll-indicator {
@@ -871,6 +837,7 @@
                 padding: 80px 1rem;
             }
         }
+        /* RESPON HANDPHONE */
         @media (max-width: 480px) {
             .hero-title {
                 font-size: 2rem;
@@ -879,7 +846,40 @@
             .loading-bar {
                 width: 200px;
             }
+            html, body {
+                max-width: 100vw;
+                overflow-x: hidden;
+            }
+            section, .nav-container, .footer-content {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                max-width: 100vw !important;
+                box-sizing: border-box;
+            }
+            .section-title {
+                font-size: 1.3rem !important;
+                word-break: break-word;
+                white-space: normal;
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+            .about-container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                gap: 2rem !important;
+                width: 100% !important;
+            }
+            .about-image,
+            .about-text {
+                width: 100% !important;
+                max-width: 350px;
+                margin: 0 auto;
+            }
         }
+
 
         /* Untuk tablet sedang (769px - 1024px) */
         @media (min-width: 769px) and (max-width: 1024px) {
@@ -1228,13 +1228,6 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="social-links">
-                <a href="#" class="social-link">💼</a>
-                <a href="#" class="social-link">🐙</a>
-                <a href="#" class="social-link">🐦</a>
-                <a href="#" class="social-link">📷</a>
-                <a href="#" class="social-link">📺</a>
-            </div>
             <p>&copy; 2024 Future Developer. Coded with 💚 and powered by ☕</p>
             <p style="margin-top: 1rem; opacity: 0.6;">Built with bleeding-edge technology for tomorrow's web</p>
         </div>
