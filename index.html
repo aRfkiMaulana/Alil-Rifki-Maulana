@@ -9,13 +9,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
         
         :root {
-            --primary-color: #00ff88;
-            --secondary-color: #0066ff;
-            --accent-color: #ff0066;
-            --dark-bg: #0a0a0a;
+            --primary-color: #4a90e2;
+            --secondary-color: #7b68ee;
+            --accent-color: #e74c3c;
+            --dark-bg: #1a1a2e;
             --glass-bg: rgba(255, 255, 255, 0.05);
             --glass-border: rgba(255, 255, 255, 0.1);
-            --neon-glow: 0 0 20px var(--primary-color);
             --text-primary: #ffffff;
             --text-secondary: rgba(255, 255, 255, 0.7);
         }
@@ -189,7 +188,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: gradientShift 4s ease-in-out infinite;
-            text-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+            text-shadow: 0 0 40px var(--primary-color);
         }
 
         .hero-subtitle {
@@ -366,7 +365,7 @@
             align-items: center;
             justify-content: center;
             font-size: 4rem;
-            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 20px 40px var(--primary-color);
         }
 
         .about-text {
@@ -413,7 +412,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
             transition: left 0.7s ease;
         }
 
@@ -423,7 +422,7 @@
 
         .skill-card:hover {
             transform: translateY(-20px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 30px 60px var(--primary-color);
             border-color: var(--primary-color);
         }
 
@@ -505,13 +504,13 @@
 
         .project-card:hover {
             transform: translateY(-20px) rotateX(5deg);
-            box-shadow: 0 40px 80px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 40px 80px var(--primary-color);
             border-color: var(--primary-color);
         }
 
         .project-image {
             height: 250px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -565,11 +564,11 @@
 
         .tech-tag {
             padding: 0.5rem 1rem;
-            background: rgba(0, 255, 136, 0.1);
+            background: rgba(74, 144, 226, 0.1);
             color: var(--primary-color);
             border-radius: 20px;
             font-size: 0.9rem;
-            border: 1px solid rgba(0, 255, 136, 0.3);
+            border: 1px solid rgba(74, 144, 226, 0.3);
         }
 
         .project-links {
@@ -593,7 +592,7 @@
         .project-link:hover {
             background: var(--primary-color);
             color: var(--dark-bg);
-            box-shadow: var(--neon-glow);
+            box-shadow: 0 0 10px var(--primary-color);
         }
 
         /* Contact Section */
@@ -625,7 +624,7 @@
 
         .contact-item:hover {
             border-color: var(--primary-color);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+            box-shadow: 0 10px 30px var(--primary-color);
         }
 
         .contact-icon {
@@ -647,7 +646,7 @@
 
         .contact-form:hover {
             border-color: var(--primary-color);
-            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.1);
+            box-shadow: 0 20px 60px var(--primary-color);
         }
 
         .form-group {
@@ -677,7 +676,7 @@
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-color);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            box-shadow: 0 0 20px var(--primary-color);
         }
 
         .form-group textarea {
@@ -714,7 +713,7 @@
 
         .submit-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+            box-shadow: 0 10px 30px var(--primary-color);
         }
 
         .submit-btn:hover::before {
@@ -1012,7 +1011,7 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title fade-in">PROJECTS_SHOWCASE</h2>
+        <h2 class="section-title fade-in">PROJECTS SHOWCASE</h2>
         <div class="projects-grid">
             <div class="project-card fade-in">
                 <div class="project-image">
@@ -1022,18 +1021,14 @@
                     </div>
                 </div>
                 <div class="project-content">
-                    <div class="project-title">AI-Powered E-Commerce Platform</div>
-                    <div class="project-description">Platform e-commerce cerdas dengan sistem rekomendasi AI, analitik real-time, dan pengalaman pengguna yang dipersonalisasi.</div>
+                    <div class="project-title">Disperkim Samarinda Mobile</div>
+                    <div class="project-description">Transparansi informasi publik Disperkim Samarinda. PPID Disperkim Samarinda Mobile kini tersedia untuk Android dengan fitur unduh dokumen langsung dari genggaman tangan Anda.</div>
                     <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">LIVE DEMO</a>
-                        <a href="#" class="project-link">SOURCE CODE</a>
+                        <a href="https://perkim.samarindakota.go.id/ppid_mobile/" class="project-link">VIEW PROJECT</a>
                     </div>
                 </div>
             </div>
@@ -1046,114 +1041,15 @@
                     </div>
                 </div>
                 <div class="project-content">
-                    <div class="project-title">VR Metaverse Experience</div>
-                    <div class="project-description">Aplikasi VR immersive untuk kolaborasi virtual dengan teknologi WebXR dan Three.js untuk pengalaman lintas platform.</div>
+                    <div class="project-title">Gift Birthday</div>
+                    <div class="project-description">Sebuah hadiah kecil untuk hari ulang tahun berbasis website</div>
                     <div class="project-tech">
-                        <span class="tech-tag">Three.js</span>
-                        <span class="tech-tag">WebXR</span>
-                        <span class="tech-tag">Socket.io</span>
-                        <span class="tech-tag">Blender</span>
-                        <span class="tech-tag">WebRTC</span>
+                        <span class="tech-tag">Html</span>
+                        <span class="tech-tag">Css</span>
+                        <span class="tech-tag">Java Script</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">LIVE DEMO</a>
-                        <a href="#" class="project-link">SOURCE CODE</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    🤖
-                    <div class="project-overlay">
-                        <span style="color: white; font-size: 1.2rem;">VIEW PROJECT</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">Smart City IoT Dashboard</div>
-                    <div class="project-description">Dashboard real-time untuk monitoring kota pintar dengan integrasi IoT sensors, predictive analytics, dan visualisasi data interaktif.</div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">IoT</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Docker</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">LIVE DEMO</a>
-                        <a href="#" class="project-link">SOURCE CODE</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    🎮
-                    <div class="project-overlay">
-                        <span style="color: white; font-size: 1.2rem;">VIEW PROJECT</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">Blockchain Gaming Platform</div>
-                    <div class="project-description">Platform gaming berbasis blockchain dengan NFT integration, play-to-earn mechanics, dan marketplace terdesentralisasi.</div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Solidity</span>
-                        <span class="tech-tag">Web3.js</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">IPFS</span>
-                        <span class="tech-tag">Ethereum</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">LIVE DEMO</a>
-                        <a href="#" class="project-link">SOURCE CODE</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    🧠
-                    <div class="project-overlay">
-                        <span style="color: white; font-size: 1.2rem;">VIEW PROJECT</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">Neural Network Visualizer</div>
-                    <div class="project-description">Tool interaktif untuk visualisasi dan debugging neural networks dengan real-time training monitoring dan architecture builder.</div>
-                    <div class="project-tech">
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">WebGL</span>
-                        <span class="tech-tag">TensorBoard</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">LIVE DEMO</a>
-                        <a href="#" class="project-link">SOURCE CODE</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card fade-in">
-                <div class="project-image">
-                    🚀
-                    <div class="project-overlay">
-                        <span style="color: white; font-size: 1.2rem;">VIEW PROJECT</span>
-                    </div>
-                </div>
-                <div class="project-content">
-                    <div class="project-title">Quantum Computing Simulator</div>
-                    <div class="project-description">Simulator quantum computing dengan visualisasi qubit states, quantum gates, dan algoritma quantum populer untuk edukasi.</div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Qiskit</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Matplotlib</span>
-                        <span class="tech-tag">Jupyter</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">LIVE DEMO</a>
-                        <a href="#" class="project-link">SOURCE CODE</a>
+                        <a href="https://arfkimaulana.github.io/birthday/" class="project-link">VIEW PROJECT</a>
                     </div>
                 </div>
             </div>
@@ -1162,7 +1058,7 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title fade-in">CONTACT_PROTOCOL</h2>
+        <h2 class="section-title fade-in">CONTACT</h2>
         <div class="contact-container fade-in">
             <div class="contact-info">
                 <h3>LET'S CONNECT</h3>
@@ -1170,35 +1066,28 @@
                     <div class="contact-icon">📧</div>
                     <div>
                         <h4>Email</h4>
-                        <p>developer@futurecode.io</p>
+                        <p>alilrifkim@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
                     <div>
                         <h4>Phone</h4>
-                        <p>+62 812 3456 7890</p>
+                        <p>+62 822 9922 5086</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📍</div>
                     <div>
                         <h4>Location</h4>
-                        <p>Jakarta, Indonesia</p>
+                        <p>Samarinda, Indonesia</p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">💼</div>
-                    <div>
-                        <h4>LinkedIn</h4>
-                        <p>linkedin.com/in/futuredev</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🐙</div>
+                    <div class="contact-icon"></div>
                     <div>
                         <h4>GitHub</h4>
-                        <p>github.com/futuredev</p>
+                        <p>aRfkimaulana</p>
                     </div>
                 </div>
             </div>
@@ -1228,8 +1117,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Future Developer. Coded with 💚 and powered by ☕</p>
-            <p style="margin-top: 1rem; opacity: 0.6;">Built with bleeding-edge technology for tomorrow's web</p>
+            <p>&copy; 2025. Coded powered by </p>
         </div>
     </footer>
 
