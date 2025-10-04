@@ -879,6 +879,9 @@
     <!-- Three.js Canvas -->
     <canvas id="threejs-canvas"></canvas>
 
+    <!-- musik -->
+     <audio id="bgMusic" src="nothing.mp3" loop></audio>
+
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -1245,9 +1248,21 @@
                 document.getElementById('loading').style.opacity = '0';
                 setTimeout(() => {
                     document.getElementById('loading').style.display = 'none';
+
+                    // Mulai musik setelah loading selesai
+                    const bgMusic = document.getElementById('bgMusic');
+                    bgMusic.currentTime = 0;
+                    bgMusic.play();
+
+                    // Jika musik berhenti, ulangi lagi (fallback jika loop tidak bekerja)
+                    bgMusic.addEventListener('ended', function() {
+                        this.currentTime = 0;
+                        this.play();
+                    });
                 }, 1000);
             }, 3000);
         });
+
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
