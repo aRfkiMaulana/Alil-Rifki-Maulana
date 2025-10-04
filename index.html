@@ -322,9 +322,7 @@
         .profile-frame {
             width: 350px;
             height: 350px;
-            background: var(--glass-bg);
             backdrop-filter: blur(20px);
-            border: 2px solid var(--glass-border);
             border-radius: 20px;
             display: flex;
             align-items: center;
@@ -333,38 +331,16 @@
             position: relative;
             overflow: hidden;
         }
-
-        .profile-frame::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-            border-radius: 22px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .profile-frame:hover::before {
-            opacity: 1;
-        }
-
-        .profile-frame:hover {
-            transform: rotateY(10deg) rotateX(10deg);
-        }
-
+        
         .profile-avatar {
+            border: 3px solid var(--glass-border);
             width: 200px;
             height: 200px;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
+            border-radius: 20px;
         }
 
         .about-text {
@@ -942,13 +918,13 @@
         <div class="about-container fade-in">
             <div class="about-image">
                 <div class="profile-frame">
-                    <div class="profile-avatar">👨‍💻</div>
+                    <img src="foto1.jpg" alt="Foto Alil Rifki Maulana" class="profile-avatar" style="object-fit: cover; width: 347px; height: 347px;">
                 </div>
             </div>
             <div class="about-text">
-                <p>Saya adalah <span class="highlight">Full-Stack Developer</span> yang passionate dalam mengembangkan aplikasi web dan mobile yang inovatif. Dengan pengalaman dalam berbagai teknologi modern, saya selalu berusaha untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang luar biasa.</p>
-                <p>Spesialisasi saya meliputi <span class="highlight">JavaScript, React, Node.js, Python,</span> dan berbagai framework modern lainnya. Saya juga memiliki keahlian dalam <span class="highlight">UI/UX Design, DevOps,</span> dan <span class="highlight">Machine Learning</span>.</p>
-                <p>Mari berkolaborasi untuk menciptakan masa depan digital yang lebih baik!</p>
+                <p>Saya adalah <span class="highlight">Full-Stack Developer</span> yang passionate dalam mengembangkan aplikasi web dan mobile. Dengan pengalaman dalam berbagai teknologi modern, saya selalu berusaha untuk menciptakan solusi yang tidak hanya fungsional, tetapi juga memberikan pengalaman pengguna yang luar biasa.</p>
+                <p>Spesialisasi saya meliputi <span class="highlight">JavaScript, React, Node.js, Python, Dart, PHP</span> dan berbagai framework seperti <span class="highlight">Flutter, Laravel, dan Express</span>. Saya juga memiliki keahlian dalam <span class="highlight">UI/UX Design</span>.</p>
+                <p>Let’s collaborate!</p>
             </div>
         </div>
     </section>
