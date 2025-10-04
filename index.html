@@ -400,7 +400,6 @@
         }
 
         .skill-card:hover {
-            transform: translateY(-20px) scale(1.05);
             box-shadow: 0 30px 60px var(--primary-color);
             border-color: var(--primary-color);
         }
@@ -465,7 +464,6 @@
         }
 
         .project-card:hover {
-            transform: translateY(-20px) rotateX(5deg);
             box-shadow: 0 40px 80px var(--primary-color);
             border-color: var(--primary-color);
         }
@@ -853,7 +851,7 @@
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loading">
-        <div class="loading-text">INITIALIZING...</div>
+        <div class="loading-text">Welcome to my portfolio...</div>
         <div class="loading-bar">
             <div class="loading-progress"></div>
         </div>
@@ -887,7 +885,7 @@
         <div class="particles" id="particles"></div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="glitch-text">FUTURE DEVELOPER</span>
+                <span class="glitch-text">WEB DEVELOPER</span>
             </h1>
             <p class="hero-subtitle">a computer science student</p>
             <div class="cta-container">
@@ -1094,20 +1092,24 @@
                         <p>Samarinda, Indonesia</p>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">👀</div>
-                    <div>
-                        <h4>GitHub</h4>
-                        <p>aRfkimaulana</p>
+                <a href="https://github.com/aRfkiMaulana" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+                    <div class="contact-item">
+                        <div class="contact-icon">👀</div>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>aRfkimaulana</p>
+                        </div>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🦋</div>
-                    <div>
-                        <h4>Instagram</h4>
-                        <p>aRfkimaulana_</p>
+                </a>
+                <a href="https://instagram.com/aRfkimaulana_" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+                    <div class="contact-item">
+                        <div class="contact-icon">🦋</div>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>aRfkimaulana_</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <form class="contact-form" id="contactForm">
@@ -1309,11 +1311,10 @@
         // Enhanced hover effects
         document.querySelectorAll('.skill-card, .project-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-20px) rotateX(10deg) rotateY(5deg)';
+                this.style.transform = 'translateY(-20px)'; // Hapus rotateX dan rotateY
             });
-            
             card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+                this.style.transform = 'translateY(0)';
             });
         });
 
